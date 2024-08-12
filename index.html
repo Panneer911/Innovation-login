@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image:url(https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg)
+        }
+
+        .login-container {
+            background-color: hsla(332, 87%, 50%, 0.767);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: medium;
+            color: rgb(12, 12, 12);
+         
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .login-button {
+            width: 40%;
+            padding: 10px;
+      margin-left:30%;
+            background-color: #e7118e;
+            color: rgb(12, 12, 12);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: #45a049;
+        }
+
+        .forgot-password {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            color: #151616;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+        .login-container i{
+            margin-left: 2%;
+
+  
+
+        }
+    </style>
+</head>
+<body>
+  <div class="login-container">
+        <h2>CUSTOMER LOGIN</h2>
+        <div class="input-container">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" class="input-field" placeholder="Username">
+        </div>
+        <div class="input-container">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" class="input-field" placeholder="Password">
+        </div>
+        <button class="login-button" onclick="login()">LOGIN</button>
+        <a href="#" class="forgot-password" onclick="forgotPassword()">Forgot Password?</a>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === "Entri Elevate" && password === "admin123") {
+                window.location.href = "homepage.html";
+            } else {
+                alert("Invalid username or password");
+            }
+        }
+
+        function forgotPassword() {
+            var email = prompt("Enter the email");
+            if (email) {
+                alert("Verification code sent to your email");
+            }
+        }
+    </script>
+</body>
+</html>
